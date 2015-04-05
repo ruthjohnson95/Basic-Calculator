@@ -27,7 +27,7 @@ function getUserInfo()
 	 	
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	forYou();
-	 	;
+	 	
 	 	
 	 	/*
 	 	+"<div class='row'>"
@@ -131,7 +131,7 @@ function getUserPosts()
 //get the messageID of a given postID
 function getPostMessage(id) {
 	console.log("getPostMes called");
-	FB.api('/'+id+'/posts ', function(response){
+	FB.api('/'+id+'/posts', function(response){
 		console.log(response.data);
 		for(var i = 0; i<=100; i++) 
 		{
