@@ -2,7 +2,7 @@
 //var indicator = false;
 
 function parse(indicator, text, word){
-
+console.log("made it into parse");
 // Look for "F" in the text
 for(var i = 0; i < text.length; i++) {
 	if(text[i]=='#'){
