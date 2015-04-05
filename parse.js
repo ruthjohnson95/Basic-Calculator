@@ -23,7 +23,10 @@ function parse(indicator, text, word)
 	{
 		var basicInd = text.indexOf(word,searchInd);
 		
-		if(basicInd == -1) break; //couldn't find the word; so stop searching
+		if(basicInd == -1){
+			console.log("Breaking");
+			break; //couldn't find the word; so stop searching
+		} 
 		
 		console.log("Found the word " + word);
 		console.log("Word we want: " + word);
