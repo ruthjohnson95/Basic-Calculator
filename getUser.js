@@ -102,10 +102,10 @@ function getFeed()
 	
 }
 ///////////////////////////////////////////////////
-
+/*
 function getUserPosts()
 {
-	FB.api('4983859492027/groups',function(response){
+	FB.api('4983859492027/posts',function(response){
 		for (var i=0; i<=100; i++)
 		{
 			getPostMessage(response.data[i].id);
@@ -113,6 +113,7 @@ function getUserPosts()
 	});
 	
 }
+*/
 //////////////////////////////////////////////////////
 //get the messageID of a given postID
 function getPostMessage(id) {
@@ -124,8 +125,6 @@ function getPostMessage(id) {
 	});
 
 }
-
-
 
 
 //////////////////////////////////////////////////
