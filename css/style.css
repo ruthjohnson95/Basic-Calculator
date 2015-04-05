@@ -943,7 +943,7 @@
 			background-color: #F1A9A0;
 			color: rgba(255, 255, 255, 0.75);
 			background-attachment: fixed,							fixed;
-			background-image: url("images/overlay1.png"), url("../images/header.jpg");
+		/*	background-image: url("images/overlay1.png"), url("../images/header.jpg");  */
 			background-size: auto,							cover;
 		}
 
