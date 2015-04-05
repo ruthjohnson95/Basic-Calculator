@@ -13,7 +13,7 @@ function getUserInfo()
 	 	console.log("Got to here");
 	 	
 	 	var strtab="<div id='content'>"+"<ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'>"
-	 	+"<li class='active'><a href='#red' onclick='forYour()' data-toggle='tab'>Events for You</a></li>"
+	 	+"<li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li>"
 	 	+"<li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li>"
 	 	+"<li><a href='#yellow' onclick='noInput()' data-toggle='tab'>" 
 	 	+"<form id= 'myForm'><div class='form-group'>"
