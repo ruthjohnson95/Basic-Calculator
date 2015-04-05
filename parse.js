@@ -5,6 +5,10 @@ function parse(indicator, text, word){
 
 // Look for "F" in the text
 for(var i = 0; i < text.length; i++) {
+	if(text[i]=='#'){
+		hash_count = hash_count+1;
+		console.log("Found a #")
+	}
 	for(var i = 0; i < text.length; i++) {
 	if (text[i] == word[0]) {
 		var j=1;
