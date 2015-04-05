@@ -1227,6 +1227,7 @@
 		background-attachment: fixed,							fixed,							fixed;
 		background-image: url("images/overlay2.png"), url("images/overlay4.svg"), linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);
 		background-position: top left,						center center,					center center;
+		background-image: url("http://fc05.deviantart.net/fs70/i/2011/326/8/d/black_and_white_view_trecco_bay_beach_nov_2011_by_welshrocker-d4gz0c6.jpg");
 		background-size: auto,							cover,							cover;
 		text-align: center;
 	}
