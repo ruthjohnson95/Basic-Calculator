@@ -14,7 +14,8 @@
 
 h1{
 	font-family: "Times New Roman", Times, serif;
-	color: #1234EF;
+	/*color: #1234EF;*/
+	color: black;
 }
 
 /* Basic */
