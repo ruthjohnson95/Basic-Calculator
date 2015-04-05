@@ -44,6 +44,7 @@ var openGroups=[
 ]
 
 var wordMusthave = ["free","FREE","Free"];
+var basicWords = ["basic", "latte", "Uggs", "test"];
 var wordOptional = [];
 
 
