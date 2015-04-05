@@ -38,4 +38,10 @@ function parse(indicator, text, word)
 
 	console.log("Ryan Gosling hotness: " + basic_count);
 	
+	if(word == "juice cleanse")
+	{
+		var str = "<p>" + basic_count + "</p>";
+	 	console.log("PH num to send to HTML " + basic_count);
+	 	document.getElementById("phNum").innerHTML=str;
+	}
 }
