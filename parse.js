@@ -33,6 +33,7 @@ for(var i = 0; i < text.length; i++) {
 			counsole.log(basic_count);
 			indicator.value=true;
 		}
+	}	
 	
 	}
 }}
