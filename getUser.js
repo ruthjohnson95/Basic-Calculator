@@ -5,31 +5,18 @@ function getUserInfo()
 {
 	FB.api('/me', function(response) 
 	{
-		var str="<p>"+response.name+"</p>";
-	  	var str2 ="Logout";
-	  	document.getElementById("status").innerHTML=str;
-		document.getElementById("demo").innerHTML=str2;
-	 	getPhoto();	 
+		//var str="<p>"+response.name+"</p>";
+	  	//var str2 ="Logout";
+	  	//document.getElementById("status").innerHTML=str;
+		//document.getElementById("demo").innerHTML=str2;
+	 	getPhoto();
 	 	
 	 	console.log("Got to here");
 	 	
-	 	var strtab="<div id='content'>"+"<ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'>"
-	 	+"<li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li>"
-	 	+"<li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li>"
-	 	+"<li><a href='#yellow' onclick='noInput()' data-toggle='tab'>" 
-	 	+"<form id= 'myForm'><div class='form-group'>"
-	 	+"<input type='text' id = 'input' class='form-control' placeholder='Events Around the world..' >"
-	 	+"</div> <button onclick='getWorld()' class='btn btn-default'>Go!</button>"
-	 	+"</form></a></li>"
-	 	+"</ul><div id='my-tab-content' class='tab-content'>"
-	 	+"<div class='tab-pane active' id='red'><br><br><p id='forya'></p></div>"
-	 	+"<div class='tab-pane' id='green'><br><br><p id='foreveryone'></p></div>"
-	 	+"<div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
-	 	
-	 	document.getElementById("container2").innerHTML=strtab;
+	 	//document.getElementById("container2").innerHTML=strtab;
 	 	forYou();
-	 	
-	 	document.getElementById("phNum").innerHTML="<div id='phNum'>" + basic_count + "</div>";
+	 	var str = "<div id='phNum'>" + basic_count + "</div>";
+	 	document.getElementById("phNum").innerHTML=str;
 	 	
 	 	/*
 	 	+"<div class='row'>"
