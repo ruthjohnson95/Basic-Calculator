@@ -163,6 +163,7 @@ function tracePostMessage(){
 	console.log("tracePostMes called");
 	FB.api('/'+id+'',function(response)
 	{ 
+		console.log("about to call traceEvent");
 		traceEvent(response.object.id,"forya");
 	});
 }
