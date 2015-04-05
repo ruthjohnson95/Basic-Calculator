@@ -94,7 +94,7 @@ function getFeed()
 			{
 				parse(indicatorMust,response.feed.data[i].message,basicWords[j]);
 			}
-			parse(indicatorOpt,response.feed.data[i].message,wordOpt.value);
+			//parse(indicatorOpt,response.feed.data[i].message,wordOpt.value);
 			var str="";
 			if(indicatorMust.value==true &&indicatorOpt.value==true )
 			{
