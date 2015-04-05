@@ -227,7 +227,7 @@ var img = {ad:null};
 function traceEvent(id,domain)
 {
 	FB.api('/'+id+'', function(response)
-	console.log("Made it to traceEvent");
+	
 	{	var str = "";
 		var indicatorMust = {value: false};
 		var indicatorOpt = {value: false};
