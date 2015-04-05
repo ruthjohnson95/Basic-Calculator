@@ -106,7 +106,7 @@ function getFeed()
 function getUserPosts()
 {
 	FB.api('4983859492027/groups',function(response){
-		for (vari 1=0; i<=100; i++)
+		for (var i=0; i<=100; i++)
 		{
 			getPostMessage(response.data[i].id);
 		}
