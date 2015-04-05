@@ -86,7 +86,6 @@ function getFeed()
 	id=openGroups[a];
 	FB.api('/'+id+'/?fields=feed', function(response) 
 	{
-		var str="";
 		for(var i=0; i<10; i++)
 		{
 			var indicatorMust = {value : false};
