@@ -44,6 +44,6 @@ function parse(indicator, text, word)
 		var str = "<p>" + basic_count + "</p>";
 	 	console.log("PH num to send to HTML " + basic_count);
 	 	document.getElementById("phNum").innerHTML=str;
-	 	basic_count = 0;
+	 	//basic_count = 0;
 	}
 }
