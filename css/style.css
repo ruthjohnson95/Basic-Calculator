@@ -1028,7 +1028,7 @@
 		background-color: #4686a0;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed,							fixed,							fixed;
-		background-image: url("http://i.imgur.com/Jz6gdeR.jpg?1");
+		background-image: url("http://i.imgur.com/Jz6gdeR.jpg?1");  background-repeat: repeat-x;  background-repeat: repeat-y;
 		background-position: top left,						center center,					center center;
 		background-size: auto,							cover,							cover;
 		overflow: hidden;
