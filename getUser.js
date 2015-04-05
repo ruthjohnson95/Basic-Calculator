@@ -1,4 +1,4 @@
-////////TODO: FEED THE SUBMIT RESULT HERE 
+//////////TODO: FEED THE SUBMIT RESULT HERE 
 
 function getUserInfo() 
 {
