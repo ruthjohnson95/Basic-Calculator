@@ -146,10 +146,11 @@ function getPostMessage() {
 	FB.api('/me/?fields=feed', function(response){ //ADDED here status not posts
 		for(var i = 0; i<=5; i++) 
 		{
-			console.log("calling trace event w/ id: " + response.data[i].id);
 			if(typeof response.data[i] === 'undefined'){
 			   console.log("nitzan is singing because he didn't get enough sleep");
 			 };
+			 
+			console.log("calling trace event w/ id: " + response.data[i].id);
 			traceEvent(response.data[i].id,"forya");
 			
 		}	
