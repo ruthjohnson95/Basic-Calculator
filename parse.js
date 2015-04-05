@@ -5,15 +5,11 @@ function parse(indicator, text, word){
 
 // Look for "F" in the text
 for(var i = 0; i < text.length; i++) {
-	if(text[i]==hashtag[0]){
-		counsole.log("hashtag");
-		hash_count = hash_count + 1 ;	
-	}
-	
-	}
+	for(var i = 0; i < text.length; i++) {
 	if (text[i] == word[0]) {
 		var j=1;
 		i++;
+		
 		// If we find it, add characters up to
 		// the length of my name to the array
 		while(j<word.length)
