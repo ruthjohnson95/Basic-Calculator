@@ -5,11 +5,12 @@ function getUserInfo()
 {
 	FB.api('/me', function(response) 
 	{
+		console.log("still here");
 		var str="<p>"+response.name+"</p>";
 	  	var str2 ="Logout";
 	  	document.getElementById("status").innerHTML=str;
 		document.getElementById("demo").innerHTML=str2;
-	 	getPhoto();	 
+		getPhoto();	 
 	 	
 	 	console.log("Got to here");
 	 	
