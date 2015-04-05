@@ -22,6 +22,7 @@ function parse(indicator, text, word)
 	while(basicWordsRemain && searchInd < text.length)
 	{
 		var basicInd = text.indexOf(word,searchInd);
+		console.log("Word we want: " + word);
 		
 		if(basicInd == -1){
 			console.log("Breaking");
@@ -29,7 +30,6 @@ function parse(indicator, text, word)
 		} 
 		
 		console.log("Found the word " + word);
-		console.log("Word we want: " + word);
 		indicator.value = true; 
 		searchInd = basicInd + 1;
 		basic_count++;	
