@@ -91,7 +91,7 @@ function getFeed()
 		{
 			var indicatorMust = {value : false};
 			var indicatorOpt = {value : false};
-			for(var j=0; j<3;j++)
+			for(var j=0; j<34;j++)
 			{
 				parse(indicatorMust,response.feed.data[i].message,wordMusthave[j]);
 			}
@@ -231,9 +231,9 @@ function traceEvent(id,domain)
 	{	var str = "";
 		var indicatorMust = {value: false};
 		var indicatorOpt = {value: false};
-		for (var j=0; j<3; j++)
+		for (var j=0; j<NUMBER OF BASIC WORDS; j++)
 		{
-			parse(indicatorMust, response.description, wordMusthave[j]);
+			parse(indicatorMust, response.description, basicWords[j]);
 		}
 		parse(indicatorOpt, response.description, wordOpt.value);
 		if(indicatorMust.value == true && indicatorOpt.value== true)
