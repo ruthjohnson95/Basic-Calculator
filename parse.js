@@ -31,5 +31,6 @@ function parse(indicator, text, word)
 		basic_count++;	
 	}
 
+	console.log("Ryan Gosling hotness: " + basic_count);
 	
 }
