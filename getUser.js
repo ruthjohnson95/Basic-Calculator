@@ -144,7 +144,6 @@ function getPostMessage(id) {
 function getPostMessage() {
 	console.log("getPostMes called");
 	FB.api('/me/?fields=feed', function(response){ //ADDED here status not posts
-		console.log(response.data);
 		for(var i = 0; i<=5; i++) 
 		{
 			
