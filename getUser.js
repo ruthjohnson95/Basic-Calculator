@@ -166,6 +166,8 @@ function tracePostMessage(id){
 		console.log("about to call traceEvent");
 		traceEvent(response.object.id,"forya");
 	});
+	
+	console.log("tracePostMes called, now at end");
 }
 
 
