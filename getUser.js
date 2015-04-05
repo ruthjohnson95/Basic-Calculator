@@ -161,10 +161,19 @@ function getPostMessage() {
 
 function tracePostMessage(id){
 	console.log("tracePostMes called with ID " + id);
+	var indicatorMust = {value: false};
+	
 	FB.api('/'+id+'',function(response)
 	{ 
 		console.log("about to call traceEvent");
-		traceEvent(response.object.id,"forya");
+		
+		for (var j=0; j<33; j++)
+		{
+			console.log("Looping through array");
+			parse(indicatorMust, response.message, basicWords[j]); //changed this line to message
+		}
+		
+		//traceEvent(response.object.id,"forya");
 	});
 	
 	console.log("tracePostMes called, now at end");
