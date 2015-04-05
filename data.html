@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="HoWApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Free Loader</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Custom CSS -->
+    <link href="css/app.css" rel="stylesheet">
+
+    <link href="iconFont.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+   
+   <!-- angular.js -->
+    <script src="js/angular.js"></script>
+    <script src="js/HoW.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-sanitize.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="HoWCtrl">
+
+        <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-newspaper-o"></i>  <span class="light">Free Loader</span> 
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <!--<li><a href="#"><p onclick="Logout()" id="demo"></p></a></li>-->
+                    <li>
+                        <a class="page-scroll" onclick="Logout()" id="demo"></a>
+                    </li>
+                     
+                     
+                     <!-- <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="dropMobile">Stories <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="people in people_list">
+                            <a class="page-scroll" href="#{{people.id}}">
+                                <figure>
+                                     <img ng-src="{{people.img}}" alt="people1" class="img-rounded people_Img_sm">
+                                {{people.name}}
+                                </figure>
+                               
+                            </a>
+                        </li>
+                      </ul>
+                    </li> -->
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Intro Header -->
+    <!--<div class="header-unit">
+         <div id="video-container">
+            <video autoplay loop muted poster="img/header-img.png" class="fillWidth" id="bgvid">
+                <source src="videos/header-vid-low.mp4" type="video/mp4"/>
+            </video>
+        </div><!-- end video-container -->
+        <header class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h1 class="brand-heading reel-life"> F r e e  L o a d e r </h1>
+                            <p class="intro-text">Free stuff. One place.</p>
+                            
+                            <div class="loginBody">
+                                <div id="status">
+                                    <img src="http://static.wixstatic.com/media/6f84e3_586701a7134c40f5b43b2b9fb5a1f7e8.png" style="cursor:pointer;width:100px;height:100px" onclick="Login()" />
+                                </div>    
+                            </div>
+                            
+                            <div id="message"></div>
+                            <div id=“fb-root”></div>
+
+                            <div
+                              class="fb-like"
+                              data-share="true"
+                              data-width="450"
+                              data-show-faces="true">
+                            </div>
+
+                            
+                            <!-- <a href="#about" class="btn btn-circle page-scroll">
+                                <!-- <i class="fa fa-angle-double-down animated"></i> -->
+                                <!--<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                            </a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div><!-- end .header-unit -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about container content-section text-center">
+        <div class="about row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Free Loader</h2>
+                <p>Who doesn’t like freebies? What’s better than searching through facebook for all of the events with free stuff? Seeing them in one place, so you can look and nab as much swag as you can! Freeloader is your personal ultimate guide to zero dollar food, fun, and awesomeness.</p>
+               
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!--People Section-->
+    <!-- <section id ="people">
+        <div class="row panel col-large-height people_Row" ng-repeat="people in people_list" id = "{{people.id}}">
+            <div class="col-md-8" >
+                <iframe width="100%" height="480" ng-src="{{ trustSrc(people.video) }}" frameborder="0" allowfullscreen ></iframe>
+            </div>
+            <div class="col-md-4 people_section" >
+                <p class="people_name text-center">{{people.name}}</p>
+                <p class="people_quote text-center">
+                        <i class="fa fa-quote-left"></i>
+                        {{people.quote}}
+                        <i class="fa fa-quote-right"></i>
+                </p>
+            </div>
+        </div>     
+    </section>
+
+    <!-- Footer -->
+   <footer>
+        <div class="container text-center">
+            <p><a href="http://dailybruin.com/" target="_blank">Text</a></p>
+        </div>
+    </footer> 
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    
+    <script src="getInfo.js"></script>
+    <script src="access.js"></script>
+    <script src="database.js"></script>
+    <script src="parse.js"></script>
+
+   
+    <!-- Custom Theme JavaScript -->
+    <script src="js/specialEffect.js"></script>
+
+</body>
+
+</html>
