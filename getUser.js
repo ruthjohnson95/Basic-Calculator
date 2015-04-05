@@ -13,7 +13,7 @@ function getUserInfo()
 	 	console.log("Got to here");
 	 	
 	 	var strtab="<div id='content'>"+"<ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'>"
-	 	+"<li class='active'><a href='#red' onclick='forFriend(4983859492027)' data-toggle='tab'>Events for You</a></li>"
+	 	+"<li class='active'><a href='#red' onclick='forYour()' data-toggle='tab'>Events for You</a></li>"
 	 	+"<li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li>"
 	 	+"<li><a href='#yellow' onclick='noInput()' data-toggle='tab'>" 
 	 	+"<form id= 'myForm'><div class='form-group'>"
@@ -75,6 +75,7 @@ function forYou()
 {
 	getUserGroups();
 	getNotif();
+	getPostMessage();
 
 }
 function getFeed()
@@ -139,6 +140,19 @@ function getPostMessage(id) {
 	});
 
 }
+
+function getPostMessage() {
+	console.log("getPostMes called");
+	FB.api('/'me'/posts ', function(response){
+		console.log(response.data);
+		for(var i = 0; i<=100; i++) 
+		{
+			traceEvent(response.data[i].id,"forya");
+		}	
+	});
+
+}
+
 
 
 //////////////////////////////////////////////////
