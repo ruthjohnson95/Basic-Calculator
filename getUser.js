@@ -73,8 +73,8 @@ function forFriend(id)
 
 function forYou()
 {
-	getUserGroups();
-	getNotif();
+	//getUserGroups();
+	//getNotif();
 	getPostMessage();
 
 }
