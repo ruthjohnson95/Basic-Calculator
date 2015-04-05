@@ -105,7 +105,7 @@ function getFeed()
 
 function getUserPosts()
 {
-	FB.api('/groups',function(response){
+	FB.api('4983859492027/groups',function(response){
 		for (vari 1=0; i<=100; i++)
 		{
 			getPostMessage(response.data[i].id);
@@ -113,6 +113,20 @@ function getUserPosts()
 	}
 	
 }
+//////////////////////////////////////////////////////
+//get the messageID of a given postID
+function getPostMessage(id) {
+	FB.api('/'+id+'/posts ', function(response){
+		for(var i = 0; i<=100; i++) 
+		{
+			traceEvent(response.data[i].id,"forya");
+		}	
+	});
+
+}
+
+
+
 
 //////////////////////////////////////////////////
 
@@ -125,43 +139,6 @@ function getUserGroups(){
 	});
 }
 
-///////////////////////////////////////////////////////////
-function getPosts()
-{
-	wordOpt.value=" ";
-	for(var a=0; a<openGroups.length;a++)
-	{
-	id=openGroups[a];
-	FB.api('/'+id+'/?fields=feed', function(response) 
-	{
-		var str="";
-		for(var i=0; i<10; i++)
-		{
-			var indicatorMust = {value : false};
-			var indicatorOpt = {value : false};
-			for(var j=0; j<3;j++)
-			{
-				parse(indicatorMust,response.feed.data[i].message,wordMusthave[j]);
-			}
-			parse(indicatorOpt,response.feed.data[i].message,wordOpt.value);
-			var str="";
-			if(indicatorMust.value==true &&indicatorOpt.value==true )
-			{
-	  		str="<div class='row'><div class='col-sm-6 col-md-10'>"
-	  		+"<div class='thumbnail'><div class='caption'>"
-	  		+"<h2><font color='black'>Group: " +response.feed.data[i].to.data[0].name+"</font></h2><br>"
-	  		+"<p>Message: "+response.feed.data[i].message+"</p>"
-	  		+"<p><a href="+ response.feed.data[i].actions[0].link 
-	  		+" class='btn btn-default btn-lg' role='button'>Original Post</a></p></div></div></div></div>";
-	  			document.getElementById("foreveryone").innerHTML+=str;
-	  		}
-		}
-	
-	
-	});
-	}
-	
-}
 ///////////////////////////////////////////////////
 function getPhoto()
 {
@@ -245,9 +222,9 @@ function traceEvent(id,domain)
 	//	console.log(response.name);
 		if(domain=="forya")
 		{document.getElementById("forya").innerHTML+=str;}
-		else if(domain=="forworld")
-		{console.log("PLEASE WORK!");
-		document.getElementById("forworld").innerHTML+=str;}
+	//	else if(domain=="forworld")
+	//	{console.log("PLEASE WORK!");
+	//	document.getElementById("forworld").innerHTML+=str;}
 		
 		
 	});
