@@ -3,6 +3,7 @@
 
 function parse(indicator, text, word)
 {
+	console.log("text: " + text);
 	console.log("made it into parse");
 	// Look for "F" in the text
 	
