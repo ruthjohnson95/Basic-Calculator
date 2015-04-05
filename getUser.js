@@ -159,7 +159,7 @@ function getPostMessage() {
 
 }
 
-function tracePostMessage(){
+function tracePostMessage(id){
 	console.log("tracePostMes called");
 	FB.api('/'+id+'',function(response)
 	{ 
