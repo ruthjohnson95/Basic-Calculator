@@ -1,5 +1,6 @@
 
 //var indicator = false;
+//like omg srs going with my betches for pumpkin spice lattes while we watch the notebook
 
 function parse(indicator, text, word)
 {
