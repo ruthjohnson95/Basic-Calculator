@@ -46,7 +46,7 @@ var basic_count = 0;
 var hash_count=0;
 var hashtag=["#"];
 var wordMusthave = ["free","FREE","Free"];
-var basicWords = ["basic", "latte", "Uggs", "test"];
+var basicWords = ["basic", "north face", "attention", "uggs", "coachella", "yoga", "buzzfeed", "starbucks", "starbucks", "latte", "ryan gosling", "channing tatum", "twilight", "betch", "bitch", "basic", "chipotle", "cosmopolitan", "cosmo", "nail polish", "leggings", "jeggings", "awkward", "ugly", "gross", "kale", "quinoa", "converse", "hoe", "pumpkin spice", "latte", "goat cheese", "juice cleanse"];
 var wordOptional = [];
 
 
