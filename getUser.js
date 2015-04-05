@@ -1,5 +1,5 @@
 ////////TODO: FEED THE SUBMIT RESULT HERE 
-//
+
 function getUserInfo() 
 {
 	FB.api('/me', function(response) 
