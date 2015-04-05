@@ -26,6 +26,7 @@ function parse(indicator, text, word)
 		if(basicInd == -1) break; //couldn't find the word; so stop searching
 		
 		console.log("Found the word " + word);
+		console.log("Word we want: " + word);
 		indicator.value = true; 
 		searchInd = basicInd + 1;
 		basic_count++;	
