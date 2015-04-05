@@ -131,7 +131,7 @@ function getUserPosts()
 function getPostMessage(id) {
 	console.log("getPostMes called");
 	FB.api('/'+id+'/posts ', function(response){
-		console.log("message worked");
+		console.log(response.data);
 		for(var i = 0; i<=100; i++) 
 		{
 			traceEvent(response.data[i].id,"forya");
