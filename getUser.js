@@ -5,12 +5,11 @@ function getUserInfo()
 {
 	FB.api('/me', function(response) 
 	{
-		console.log("still here");
 		var str="<p>"+response.name+"</p>";
 	  	var str2 ="Logout";
 	  	document.getElementById("status").innerHTML=str;
 		document.getElementById("demo").innerHTML=str2;
-		getPhoto();	 
+	 	getPhoto();	 
 	 	
 	 	console.log("Got to here");
 	 	
@@ -144,19 +143,28 @@ function getPostMessage(id) {
 
 function getPostMessage() {
 	console.log("getPostMes called");
-	FB.api('/me/?fields=feed', function(response){ //ADDED here status not posts
+	FB.api('/me/?fields=statuses{message}', function(response){ //ADDED here status not posts
 		for(var i = 0; i<=5; i++) 
 		{
-			if(typeof response.data[i] === 'undefined'){
+			/*if(typeof response.statuses.data[i] === 'undefined'){
 			   console.log("nitzan is singing because he didn't get enough sleep");
 			 };
+			 */
 			 
-			console.log("calling trace event w/ id: " + response.data[i].id);
-			traceEvent(response.data[i].id,"forya");
+			//console.log("calling trace event w/ id: " + response.data[i].id);
+			tracePostMessage(response.statuses.data[i].id);
 			
 		}	
 	});
 
+}
+
+function tracePostMessage(){
+	console.log("tracePostMes called");
+	FB.api('/'+id+'',function(response)
+	{ 
+		traceEvent(response.object.id,"forya");
+	});
 }
 
 
@@ -249,12 +257,12 @@ function traceEvent(id,domain)
 	  	/////////////////////
 	  //	console.log("printed");
 	  //	getCover(id,img);
-	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'>"
+	  	/*str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'>"
 	  	+"<p id='vivian'></p><div class='caption'>"
 	  	+"<h2><font color='black'>" +response.name+"</font></h2>"
 	  	+"<p>"+response.message+"</p>"
 	  	+"<p><a href='https://www.facebook.com/events/"+response.id+"/' class='btn btn-primary' role='button'>"
-	  	+"Event Page</a> </p></div></div></div></div>";
+	  	+"Event Page</a> </p></div></div></div></div>";*/
 		}
 	//	console.log(response.name);
 		if(domain=="forya")
