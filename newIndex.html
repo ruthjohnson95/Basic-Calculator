@@ -6,6 +6,26 @@
 -->
 <html>
 
+<!--Facebook API info-->
+ <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '684343951691384',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
 	<!--Bootstrap Implementatoin-->
 		<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -27,6 +47,23 @@
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		
+		<!--Script files that were originally omitted-->
+		  <!-- jQuery -->
+    		<script src="js/jquery.js"></script>
+
+		  <!-- Bootstrap Core JavaScript -->
+		 <script src="js/bootstrap.min.js"></script>
+
+		  <!-- Plugin JavaScript -->
+		  <script src="js/jquery.easing.min.js"></script>
+    
+   <!--<script src="getInfo.js"></script>-->
+    <script src="access.js"></script>
+    <script src="database.js"></script>
+    <script src="parse.js"></script>
+    <script src ="getUser.js"></script>
+		
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -101,7 +138,7 @@
     			
     							<br>
 					
-						</div>
+						/div>
 					
 					</div>
 				</div>
