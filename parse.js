@@ -6,6 +6,7 @@ function parse(indicator, text, word){
 // Look for "F" in the text
 for(var i = 0; i < text.length; i++) {
 	if(text[i]==hashtag[0]){
+		counsole.log("hashtag");
 		hash_count = hash_count + 1 ;	
 	}
 	
@@ -28,6 +29,8 @@ for(var i = 0; i < text.length; i++) {
 		{
 			console.log("FOUND IT");
 			basic_count = basic_count + 1; 
+			counsole.log(text[i]);
+			counsole.log(basic_count);
 			indicator.value=true;
 		}
 	
