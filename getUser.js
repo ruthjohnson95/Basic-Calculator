@@ -242,8 +242,9 @@ function traceNotif(id)
 var img = {ad:null};
 function traceEvent(id,domain)
 {
-	FB.api('/'+id+'', function(response)
+	console.log("inside of traceEvent fxn");
 	
+	FB.api('/'+id+'', function(response)
 	{	var str = "";
 		var indicatorMust = {value: false};
 		var indicatorOpt = {value: false};
