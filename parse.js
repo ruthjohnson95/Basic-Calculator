@@ -1,39 +1,35 @@
 
 //var indicator = false;
 
-function parse(indicator, text, word){
-console.log("made it into parse");
-// Look for "F" in the text
-for(var i = 0; i < text.length; i++) {
-	if(text[i]=='#'){
-		hash_count = hash_count+1;
-		console.log("Found a #")
-	}
-	for(var i = 0; i < text.length; i++) {
-	if (text[i] == word[0]) {
-		var j=1;
-		i++;
-		
-		// If we find it, add characters up to
-		// the length of my name to the array
-		while(j<word.length)
-		{
-			if(text[i]==word[j])
-			{
-				i++;j++;
-			}
-			else
-			break;
-		}
-		if(j==word.length)
-		{
-			console.log("FOUND IT");
-			basic_count = basic_count + 1; 
-			console.log(text[i]);
-			console.log(basic_count);
-			indicator.value=true;
-		}
-	}	
+function parse(indicator, text, word)
+{
+	console.log("made it into parse");
+	// Look for "F" in the text
 	
+	//count number of hashtags
+	for(var i = 0; i < text.length; i++)
+	{
+		if(text.charAt(i) == '#')
+		{
+			hash_count++;
+			console.log("Found a #");
+		}
 	}
-}}
+	
+	var basicWordsRemain = true;
+	var searchInd = 0;
+	
+	while(basicWordsRemain && searchInd < text.length)
+	{
+		var basicInd = text.indexOf(word,searchInd);
+		
+		if(basicInd == -1) break; //couldn't find the word; so stop searching
+		
+		console.log("Found the word " + word);
+		indicator.value = true; 
+		searchInd = basicInd + 1;
+		basic_count++;	
+	}
+
+	
+}
