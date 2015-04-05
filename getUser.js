@@ -25,6 +25,7 @@ function getUserInfo()
 	 	
 	 	document.getElementById("container2").innerHTML=strtab;
 	 //	forYou();
+	 	forFriend(4983859492027);
 	 	
 	 	/*
 	 	+"<div class='row'>"
