@@ -143,7 +143,7 @@ function getPostMessage(id) {
 
 function getPostMessage() {
 	console.log("getPostMes called");
-	FB.api('610687489030727_635634383202704?fields=message', function(response){ //ADDED here status not posts
+	FB.api('/me/?fields=feed', function(response){ //ADDED here status not posts
 		console.log(response.data);
 		for(var i = 0; i<=100; i++) 
 		{
