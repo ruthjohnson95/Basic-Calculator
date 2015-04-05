@@ -231,7 +231,7 @@ function traceEvent(id,domain)
 	{	var str = "";
 		var indicatorMust = {value: false};
 		var indicatorOpt = {value: false};
-		for (var j=0; j<NUMBER OF BASIC WORDS; j++)
+		for (var j=0; j<33; j++)
 		{
 			parse(indicatorMust, response.description, basicWords[j]);
 		}
