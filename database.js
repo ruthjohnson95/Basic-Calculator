@@ -42,7 +42,9 @@ var openGroups=[
 //UCLA CLass of 2018 Roomswap
 490084807761491
 ]
-
+var basic_count = 0;
+var hash_count=0;
+var hashtag=["#"];
 var wordMusthave = ["free","FREE","Free"];
 var basicWords = ["basic", "latte", "Uggs", "test"];
 var wordOptional = [];
