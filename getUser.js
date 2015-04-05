@@ -110,7 +110,7 @@ function getUserPosts()
 		{
 			getPostMessage(response.data[i].id);
 		}
-	}
+	})
 	
 }
 //////////////////////////////////////////////////////
