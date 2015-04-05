@@ -20,7 +20,7 @@ window.fbAsyncInit = function()
 }(document, 'script', 'facebook-jssdk'));
 
 //login
-var permission = "email,read_friendlists,user_posts,user_status,user_likes,user_relationships,user_about_me,user_birthday,friends_status,read_stream,manage_notifications,publish_actions,user_groups,user_events";
+var permission = "email,read_friendlists,user_friends, user_posts,user_status,user_likes,user_relationships,user_about_me,user_birthday,friends_status,read_stream,manage_notifications,publish_actions,user_groups,user_events";
 function Login()
 {
 	FB.login(function(response) 
