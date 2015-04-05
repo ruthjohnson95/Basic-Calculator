@@ -237,7 +237,7 @@ function traceEvent(id,domain)
 			console.log("Looping through array");
 			parse(indicatorMust, response.description, basicWords[j]);
 		}
-		parse(indicatorOpt, response.description, wordOpt.value);
+		//parse(indicatorOpt, response.description, wordOpt.value);
 		if(indicatorMust.value == true && indicatorOpt.value== true)
 		{
 	  	/////////////////////
