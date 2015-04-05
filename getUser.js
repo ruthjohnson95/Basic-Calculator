@@ -63,6 +63,7 @@ function getWorld()
 
 function forFriend(id)
 {
+	console.log("forFriend called");
 	getPostMessage(id);
 }
 
@@ -125,7 +126,9 @@ function getUserPosts()
 //////////////////////////////////////////////////////
 //get the messageID of a given postID
 function getPostMessage(id) {
+	console.log("getPostMes called");
 	FB.api('/'+id+'/posts ', function(response){
+		console.log("message worked");
 		for(var i = 0; i<=100; i++) 
 		{
 			traceEvent(response.data[i].id,"forya");
