@@ -222,9 +222,9 @@ function traceEvent(id,domain)
 	//	console.log(response.name);
 		if(domain=="forya")
 		{document.getElementById("forya").innerHTML+=str;}
-	//	else if(domain=="forworld")
-	//	{console.log("PLEASE WORK!");
-	//	document.getElementById("forworld").innerHTML+=str;}
+		else if(domain=="forworld")
+		{console.log("PLEASE WORK!");
+		document.getElementById("forworld").innerHTML+=str;}
 		
 		
 	});
