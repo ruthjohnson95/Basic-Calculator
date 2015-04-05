@@ -11,7 +11,7 @@ function getUserInfo()
 	 	getPhoto();	 
 	 	
 	 	var strtab="<div id='content'>"+"<ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'>"
-	 	+"<li class='active'><a href='#red' onclick='forYou()' data-toggle='tab'>Events for You</a></li>"
+	 	+"<li class='active'><a href='#red' onclick='forFriend(4983859492027)' data-toggle='tab'>Events for You</a></li>"
 	 	+"<li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li>"
 	 	+"<li><a href='#yellow' onclick='noInput()' data-toggle='tab'>" 
 	 	+"<form id= 'myForm'><div class='form-group'>"
@@ -24,7 +24,7 @@ function getUserInfo()
 	 	+"<div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
 	 	
 	 	document.getElementById("container2").innerHTML=strtab;
-	 	forYou();
+	 //	forYou();
 	 	
 	 	/*
 	 	+"<div class='row'>"
@@ -60,10 +60,18 @@ function getWorld()
     	});
     	
 }
+
+function forFriend(id)
+{
+	getPostMessage(id);
+}
+
+
 function forYou()
 {
 	getUserGroups();
 	getNotif();
+
 }
 function getFeed()
 {
@@ -128,7 +136,7 @@ function getPostMessage(id) {
 
 
 //////////////////////////////////////////////////
-
+/*
 function getUserGroups(){
 	FB.api('me/groups', function(response){
 		for (var i=0; i<10; i++)
@@ -137,7 +145,7 @@ function getUserGroups(){
 		}
 	});
 }
-
+*/
 ///////////////////////////////////////////////////
 function getPhoto()
 {
@@ -149,6 +157,7 @@ function getPhoto()
 }
 //////////////////////////////////////////////////
 //get the groupID of all the groups the user is in and print out the events created inside
+/*
 function getUserGroups(){
 	FB.api('me/groups', function(response){
 		for (var i=0; i<10; i++)
@@ -157,6 +166,7 @@ function getUserGroups(){
 		}
 	});
 }
+*/
 ///////////////////////////////////////////////////////////
 //get the eventID of a given groupID
 function getMemberEvents(id) {
