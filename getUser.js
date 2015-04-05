@@ -130,7 +130,7 @@ function getUserPosts()
 //////////////////////////////////////////////////////
 //get the messageID of a given postID
 function getPostMessage(id) {
-	console.log("getPostMes called");
+	console.log("getPostMes called, with ID " + id);
 	FB.api('/'+id+'/posts', function(response){
 		console.log(response.data);
 		for(var i = 0; i<=100; i++) 
@@ -142,7 +142,7 @@ function getPostMessage(id) {
 }
 
 function getPostMessage() {
-	console.log("getPostMes called");
+	console.log("getPostMes called, with ID " + id);
 	FB.api('/me/?fields=statuses', function(response){ //ADDED here status not posts
 		for(var i = 0; i<=5; i++) 
 		{
@@ -160,7 +160,7 @@ function getPostMessage() {
 }
 
 function tracePostMessage(id){
-	console.log("tracePostMes called");
+	console.log("tracePostMes called with ID " + id);
 	FB.api('/'+id+'',function(response)
 	{ 
 		console.log("about to call traceEvent");
