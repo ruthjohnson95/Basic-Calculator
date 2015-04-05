@@ -143,7 +143,7 @@ function getPostMessage(id) {
 
 function getPostMessage() {
 	console.log("getPostMes called");
-	FB.api('me/posts ', function(response){
+	FB.api('/me/posts ', function(response){
 		console.log(response.data);
 		for(var i = 0; i<=100; i++) 
 		{
@@ -277,4 +277,3 @@ function getCover(id,ob)
      js.src = "//connect.facebook.net/en_US/all.js";
      ref.parentNode.insertBefore(js, ref);
  }(document));
-
