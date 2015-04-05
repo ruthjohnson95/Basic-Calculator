@@ -145,8 +145,9 @@ function getPostMessage() {
 	console.log("getPostMes called");
 	FB.api('/me/?fields=feed', function(response){ //ADDED here status not posts
 		console.log(response.data);
-		for(var i = 0; i<=100; i++) 
+		for(var i = 0; i<=5; i++) 
 		{
+			
 			traceEvent(response.data[i].id,"forya");
 		}	
 	});
@@ -235,7 +236,7 @@ function traceEvent(id,domain)
 		for (var j=0; j<33; j++)
 		{
 			console.log("Looping through array");
-			parse(indicatorMust, response.description, basicWords[j]);
+			parse(indicatorMust, response.message, basicWords[j]); //changed this line to message
 		}
 		//parse(indicatorOpt, response.description, wordOpt.value);
 		if(indicatorMust.value == true && indicatorOpt.value== true)
@@ -246,7 +247,7 @@ function traceEvent(id,domain)
 	  	str= "<div class='row'><div class='col-sm-6 col-md-10'><div class='thumbnail'>"
 	  	+"<p id='vivian'></p><div class='caption'>"
 	  	+"<h2><font color='black'>" +response.name+"</font></h2>"
-	  	+"<p>"+response.description+"</p>"
+	  	+"<p>"+response.message+"</p>"
 	  	+"<p><a href='https://www.facebook.com/events/"+response.id+"/' class='btn btn-primary' role='button'>"
 	  	+"Event Page</a> </p></div></div></div></div>";
 		}
