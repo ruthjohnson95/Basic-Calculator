@@ -84,7 +84,10 @@
 		line-height: 1.35em;
 		color: #3D352A;
 		text-align: center;
-		text-weight: bold;
+	}
+	
+	hi a {
+		color:#3D352A;
 	}
 
 	h2 {
