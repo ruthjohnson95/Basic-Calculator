@@ -8,6 +8,7 @@
 */
 
 .litmus{
+	background-color: #F1A9A0;
 	margin-left: auto;
 	 margin-right: auto;
 }
@@ -1008,7 +1009,7 @@
 					.main.style2 button.special:hover,
 					.main.style2 .button.special:hover {
 						background-color: rgba(255, 255, 255, 0.125) !important;
-						color: #ffffff !important;
+						color: #F1A9A0 !important;
 					}
 
 					.main.style2 input[type="submit"].special:active,
