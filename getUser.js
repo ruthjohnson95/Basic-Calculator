@@ -29,6 +29,7 @@ function getUserInfo()
 	 	document.getElementById("container2").innerHTML=strtab;
 	 	forYou();
 	 	
+	 	document.getElementById("phNum").innerHTML="<div id='phNum'>" + basic_count + "</div>";
 	 	
 	 	/*
 	 	+"<div class='row'>"
