@@ -991,7 +991,7 @@
 				.main.style2 input[type="button"].special,
 				.main.style2 button.special,
 				.main.style2 .button.special {
-					background-color: #ffffff;
+					background-color: #ECECEC;
 					box-shadow: inset 0 0 0 1px #ffffff !important;
 					color: #333 !important;
 				}
