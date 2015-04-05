@@ -17,6 +17,8 @@ function getUserInfo()
 	 	forYou();
 	 	//var str = "<div id='phNum'>" + basic_count + "</div>";
 	 	var str = "<p>" + basic_count + "</p>";
+	 	
+	 	console.log("PH num to send to HTML " + basic_count);
 	 	document.getElementById("phNum").innerHTML=str;
 	 	
 	 	/*
