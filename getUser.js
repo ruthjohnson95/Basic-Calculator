@@ -44,7 +44,7 @@ function getUserInfo()
 ///handles search
 
 function noInput() {
-	var str = "Search for free stuff in the search bar" 
+	var str = "Search for free stuff in the search bar";
 	document.getElementById("forworld").innerHTML=str;
 }
 var wordOpt={value:" "};
