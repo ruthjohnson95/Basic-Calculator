@@ -1,4 +1,5 @@
 //////////TODO: FEED THE SUBMIT RESULT HERE 
+var basicWords = ["basic", "north face", "attention", "uggs","test", "coachella", "yoga", "buzzfeed", "starbucks", "starbucks", "latte", "ryan gosling", "channing tatum", "twilight", "betch", "bitch", "basic", "chipotle", "cosmopolitan", "cosmo", "nail polish", "leggings", "jeggings", "awkward", "ugly", "gross", "kale", "quinoa", "converse", "hoe", "pumpkin spice", "latte", "goat cheese", "juice cleanse"];
 
 function getUserInfo() 
 {
