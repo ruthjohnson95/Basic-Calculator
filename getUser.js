@@ -227,11 +227,13 @@ var img = {ad:null};
 function traceEvent(id,domain)
 {
 	FB.api('/'+id+'', function(response)
+	console.log("Made it to traceEvent");
 	{	var str = "";
 		var indicatorMust = {value: false};
 		var indicatorOpt = {value: false};
 		for (var j=0; j<33; j++)
 		{
+			console.log("Looping through array");
 			parse(indicatorMust, response.description, basicWords[j]);
 		}
 		parse(indicatorOpt, response.description, wordOpt.value);
