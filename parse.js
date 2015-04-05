@@ -5,6 +5,11 @@ function parse(indicator, text, word){
 
 // Look for "F" in the text
 for(var i = 0; i < text.length; i++) {
+	if(text[i]==hashtag[0]){
+		hash_count = hash_count + 1 ;	
+	}
+	
+	}
 	if (text[i] == word[0]) {
 		var j=1;
 		i++;
@@ -22,6 +27,7 @@ for(var i = 0; i < text.length; i++) {
 		if(j==word.length)
 		{
 			console.log("FOUND IT");
+			basic_count = basic_count + 1; 
 			indicator.value=true;
 		}
 	
