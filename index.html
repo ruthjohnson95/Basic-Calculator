@@ -1,66 +1,285 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="HoWApp">
 
 <head>
-	<h1>Basic Betches</h1>
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="main.css">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Freeloader</title>
+    <link rel="shortcut icon" href="http://i.imgur.com/z5XaCW8.png">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Custom CSS -->
+    <link href="css/app.css" rel="stylesheet">
+
+    <!-- <link href="iconFont.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <!--do we intend these links to be here or no? they are not connected to anything-->
+     <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> --> 
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+   
+   <!-- angular.js -->
+    <script src="js/angular.js"></script>
+    <script src="js/HoW.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-sanitize.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
-<body>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="HoWCtrl">
+    <!-- facebook initialization code; for like counter -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '341086482753224',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+      };
 
-<p>Really funny statement about being basic ...</p>
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-<div id="status">
-<img src="http://static.wixstatic.com/media/6f84e3_586701a7134c40f5b43b2b9fb5a1f7e8.png" style="cursor:pointer;" onclick="Login()" />
-</div>
+   <!-- Navigation -->
+     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-newspaper-o"></i>  <span class="light"><img src="http://i.imgur.com/z5XaCW8.png" alt="money bag navigation" align="left" style="padding-bottom:5px;padding-right:10px;" height="30" width="36">Freeloader</span> 
+                </a>
+            </div>
 
-<div id="message"></div>
-<div id=“fb-root”></div>
-
-
-<div id="container2"></div>
-
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
-
-<script src="getInfo.js"></script>
-<script src="access.js"></script>
-<script src="database.js"></script>
-<script src="parse.js"></script>
-
-<nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container-fluid">
-    <div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#"><p onclick="Logout()" id="demo"></p></a></li>
-      </ul>
-      
-       <form id= "myForm" class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" id = "wordOpt" class="form-control" placeholder="Tacos, cookies, etc. " >
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#creators">Creators</a>
+                    </li>
+                    <!--<li><a href="#"><p onclick="Logout()" id="demo"></p></a></li>-->
+                    <li>
+                        <a class="page-scroll" style="cursor:pointer" onclick="Logout()" id="demo"></a>
+                    </li>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <button onclick="myFunction()" class="btn btn-default">submit</button>
-      </form>
-  	</nav>
-    </div>
-  </div>
+        <!-- /.container -->
+    </nav>
+    
 
+
+
+    <!-- Login Area Header -->
+        <header class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h1 class="brand-heading reel-life"> F r e e L o a d e r </h1>
+                            <p class="intro-text">Free stuff. One place.</p>
+                            
+                            <div class="loginBody">
+                                <div id="status">
+                                    <!--<img src="http://static.wixstatic.com/media/6f84e3_586701a7134c40f5b43b2b9fb5a1f7e8.png" style="cursor:pointer;width:100px;height:100px" onclick="Login()" />-->
+                                    <img src="http://static.wixstatic.com/media/6f84e3_586701a7134c40f5b43b2b9fb5a1f7e8.png" style="cursor:pointer;width:100px;height:100px" onclick="Login()" onmouseover="this.src='http://i.imgur.com/rIo8jjA.png';" onmouseout="this.src='http://static.wixstatic.com/media/6f84e3_586701a7134c40f5b43b2b9fb5a1f7e8.png';" />
+                                </div>    
+                            </div>
+                            
+                             <!--<div class="input-group">
+                              <input type="text" class="form-control" aria-label="..." placeholder="Search for events anywhere in... ">
+                              <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Place <span class="caret"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                  <li><a href="#">UCLA</a></li>
+                                  <li><a href="#">The world</a></li>
+                                </ul>
+                              </div><!-- /btn-group -->
+                            <!--</div><!-- /input-group -->
+                            <!--
+                            <div class="input-group">
+                              <input type="text"  class="form-control" id="x" placeholder="tacos, cookies, etc.">
+                              <span class="input-group-btn">
+                                <button onclick=myfunction class="btn btn-default" type="button">Go!</button>
+                              </span>
+                            </div>/input-group -->
+                            
+                            <div id="message"></div>
+                            <div id=“fb-root”></div>
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div><!-- end .header-unit -->
+    
+    
+    <!-- Search Results Section -->
+    <section id="search_res" class="search_res container content-section text-center">
+        <div id="container2"></div>
+    </section>
+    
+    
+    <!-- About Section -->
+    <section id="about" class="about container content-section text-center">
+        <hr>
+        
+        <div class="about_row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class = "about_freeloader">
+                    <h2>About Freeloader</h2>
+                    <p>Who doesn’t like freebies? What’s better than searching through facebook for all of the events with free stuff? Seeing them in one place, so you can look and nab as much swag as you can! Freeloader is your personal ultimate guide to zero dollar food, fun, and awesomeness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About The Creators Section -->
+    <section id="creators" class="creators container content-section text-center">
+        <hr>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+        
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="http://i.imgur.com/Ge742Y7.jpg" alt="Introduction to us">
+              <div class="carousel-caption">
+                <h2>About the creators</h2>
+                <p>Who are we? We are the warriors that built this town. Here we are; don’t turn away now. Okay, we didn’t build a town, unfortunately, and none of us can sing as well as Imagine Dragons. However, we are a group of the baddest baddesses you will ever find.</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="http://i.imgur.com/SA3Z9sj.jpg" alt="Ruthie">
+            </div>
+            
+            <div class="item">
+              <img src="http://i.imgur.com/iskQtbZ.jpg" alt="Garima">
+            </div>
+            
+            <div class="item">
+              <img src="http://i.imgur.com/GYKYvfo.jpg" alt="Katie">
+            </div>
+            
+            <div class="item">
+              <img src="http://i.imgur.com/QnKJO2e.jpg?1" alt="Vivian">
+            </div>
+            
+            <div class="item">
+              <img src="http://i.imgur.com/gcMRya5.jpg" alt="2nd last par">
+            </div>
+            
+            <div class="item">
+              <img src="http://i.imgur.com/FGOnXjD.jpg" alt="Last par">
+            </div>
+
+          </div>
+        
+          <!-- Controls 
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>-->
+          
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><h1 class="arrow" ><span class="sr-only">&#8249;</span></h1></a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><h1 class=" arrow">  <span class="sr-only">&rsaquo;</span></h1></a>
+          
+          
+        </div>
+        
+        <div class="about_row">
+            <!-- <div class="col-lg-8 col-lg-offset-2">
+                <div class="about_us">
+                    <h2>About the Creators</h2>
+                      <h3>platypus</h3>
+                        <p>I AM THE PAPAYA LORD.</p>
+                      <h3>another platypus</h3>
+                        <p>Russian uranium plants are cool.</p>
+                </div> 
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <footer>
+        <div class="container text-right">
+                       <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21&amp;appId=341086482753224" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+                       <!-- <div
+                              class="fb-like"
+                              data-share="true"
+                              data-width="450"
+                              data-show-faces="true">
+                            </div> -->
+        </div>
+        
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    
+    <script src="getInfo.js"></script>
+    <script src="access.js"></script>
+    <script src="database.js"></script>
+    <script src="parse.js"></script>
+
+   
+    <!-- Custom Theme JavaScript -->
+    <script src="js/specialEffect.js"></script>
+    
+    <!-- Slideshow JavaScript -->
+    <script>
+        $('.carousel').carousel({
+            interval: 10000
+            
+        })
+    </script>
 
 </body>
 
