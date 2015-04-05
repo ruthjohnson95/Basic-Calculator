@@ -29,8 +29,8 @@ for(var i = 0; i < text.length; i++) {
 		{
 			console.log("FOUND IT");
 			basic_count = basic_count + 1; 
-			counsole.log(text[i]);
-			counsole.log(basic_count);
+			console.log(text[i]);
+			console.log(basic_count);
 			indicator.value=true;
 		}
 	}	
