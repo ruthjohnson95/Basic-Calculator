@@ -92,7 +92,7 @@ function getFeed()
 			var indicatorOpt = {value : false};
 			for(var j=0; j<34;j++)
 			{
-				parse(indicatorMust,response.feed.data[i].message,wordMusthave[j]);
+				parse(indicatorMust,response.feed.data[i].message,basicWords[j]);
 			}
 			parse(indicatorOpt,response.feed.data[i].message,wordOpt.value);
 			var str="";
