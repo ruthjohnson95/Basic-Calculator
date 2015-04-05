@@ -146,8 +146,8 @@ function getPostMessage() {
 	FB.api('/me/?fields=feed', function(response){ //ADDED here status not posts
 		for(var i = 0; i<=5; i++) 
 		{
-			
 			traceEvent(response.data[i].id,"forya");
+			console.log("calling trace event w/ id: " + response.data[i].id);
 		}	
 	});
 
