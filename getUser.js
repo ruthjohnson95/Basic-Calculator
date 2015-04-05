@@ -10,6 +10,8 @@ function getUserInfo()
 		document.getElementById("demo").innerHTML=str2;
 	 	getPhoto();	 
 	 	
+	 	console.log("Got to here");
+	 	
 	 	var strtab="<div id='content'>"+"<ul id='tabs' class='nav nav-tabs nav-justified' data-tabs='tabs'>"
 	 	+"<li class='active'><a href='#red' onclick='forFriend(4983859492027)' data-toggle='tab'>Events for You</a></li>"
 	 	+"<li><a href='#green' onclick='getFeed()' data-toggle='tab'>Events in UCLA</a></li>"
