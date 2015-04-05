@@ -26,8 +26,8 @@ function getUserInfo()
 	 	+"<div class='tab-pane' id='yellow'><br><br><p id='forworld'></p></div></div></div>";
 	 	
 	 	document.getElementById("container2").innerHTML=strtab;
-	 //	forYou();
-	 	forFriend(4983859492027);
+	 	forYou();
+	 	;
 	 	
 	 	/*
 	 	+"<div class='row'>"
