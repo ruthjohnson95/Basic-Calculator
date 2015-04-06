@@ -41,9 +41,9 @@ function parse(indicator, text, word)
 	
 	if(word == "goat cheese")
 	{
-		var str = "<p>" + basic_count + "</p>";
+		//var str = "<p>" + basic_count + "</p>";
 	 	console.log("PH num to send to HTML " + basic_count);
-	 	document.getElementById("phNum").innerHTML=str;
+	 	document.getElementById("phNum").innerHTML=basic_count.toString();
 	 	//basic_count = 0;
 	}
 }

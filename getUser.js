@@ -16,10 +16,10 @@ function getUserInfo()
 	 	//document.getElementById("container2").innerHTML=strtab;
 	 	forYou();
 	 	//var str = "<div id='phNum'>" + basic_count + "</div>";
-	 	var str = "<p>" + basic_count + "</p>";
+	 	//var str = "<p>" + basic_count + "</p>";
 	 	
-	 	console.log("PH num to send to HTML " + basic_count);
-	 	document.getElementById("phNum").innerHTML=str;
+	 	//console.log("PH num to send to HTML " + basic_count);
+	 	//document.getElementById("phNum").innerHTML=str;
 	 	
 	 	/*
 	 	+"<div class='row'>"
