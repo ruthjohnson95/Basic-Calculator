@@ -23,6 +23,8 @@ window.fbAsyncInit = function()
 var permission = "email,read_friendlists,user_friends, user_posts,user_status,user_likes,user_relationships,user_about_me,user_birthday,friends_status,read_stream,manage_notifications,publish_actions,user_groups,user_events";
 function Login()
 {
+  basic_count = 0; //each time the user logs in but before any information about basic-ness is analyzed, start the basic_count for the analysis at 0
+
 	FB.login(function(response) 
 	{
 		if (response.authResponse) 
